@@ -1,0 +1,13 @@
+package com.findslot;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class FindSlotApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
