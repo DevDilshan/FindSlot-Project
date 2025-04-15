@@ -85,31 +85,60 @@
         <div id="vehicleList" class="vehicle-list"></div>
     </div>
 
+    <!-- Customer Details Tab -->
     <div id="customerDetailsTab" class="content">
         <h3 class="section-title"><i class="fas fa-users"></i> Customer Details</h3>
-        <div class="empty-state">
-            <i class="fas fa-user-clock"></i>
-            <p>Feature coming soon...</p>
-            <p>Track your regular customers and their parking habits</p>
+
+<!--        <div class="customer-tabs">-->
+<!--            <div class="customer-tab active" onclick="showCustomerTab('allCustomers')">All Customers</div>-->
+<!--            <div class="customer-tab" onclick="showCustomerTab('frequentCustomers')">Frequent Customers</div>-->
+<!--            <div class="customer-tab" onclick="showCustomerTab('searchCustomer')">Search Customer</div>-->
+<!--        </div>-->
+
+        <div id="allCustomers" class="customer-tab-content active">
+            <div id="customerList" class="vehicle-list"></div>
+        </div>
+
+        <div id="frequentCustomersTab" class="customer-tab-content">
+            <div id="frequentCustomersList" class="vehicle-list"></div>
+        </div>
+
+        <div id="searchCustomer" class="customer-tab-content">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" id="customerPhone" placeholder="Enter Customer Phone Number">
+                    <button onclick="searchCustomer()"><i class="fas fa-search"></i> Search</button>
+                </div>
+            </div>
+            <div id="customerSearchResult" class="vehicle-list"></div>
         </div>
     </div>
 
+    <!-- Parking History Tab -->
     <div id="parkingHistoryTab" class="content">
         <h3 class="section-title"><i class="fas fa-history"></i> Parking History</h3>
-        <div class="empty-state">
-            <i class="fas fa-calendar-alt"></i>
-            <p>Feature coming soon...</p>
-            <p>See past parking records and analytics</p>
+
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" id="historyVehicleNumber" placeholder="Search by Vehicle Number (Optional)">
+                <button onclick="searchParkingHistory()"><i class="fas fa-search"></i> Search</button>
+            </div>
         </div>
+
+        <div id="historyList" class="vehicle-list"></div>
     </div>
 
+    <!-- Available Slots Tab -->
     <div id="availableSlotsTab" class="content">
-        <h3 class="section-title"><i class="fas fa-parking"></i> Available Slots</h3>
-        <div class="empty-state">
-            <i class="fas fa-map-marked-alt"></i>
-            <p>Feature coming soon...</p>
-            <p>Visual representation of available parking slots</p>
+        <h3 class="section-title"><i class="fas fa-parking"></i> Parking Slots</h3>
+
+        <div class="slot-filter">
+            <button class="slot-filter-btn active" onclick="showAllSlots()">All Slots</button>
+            <button class="slot-filter-btn" onclick="showAvailableSlots()">Available</button>
+            <button class="slot-filter-btn" onclick="showOccupiedSlots()">Occupied</button>
         </div>
+
+        <div id="slotsList" class="slots-container"></div>
     </div>
 </div>
 
