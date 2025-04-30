@@ -6,7 +6,6 @@
     <title>Vehicle Parking Management System</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 <body>
 <div class="container">
@@ -30,6 +29,9 @@
         </button>
         <button class="tab-button" onclick="openTab('availableSlotsTab')">
             <i class="fas fa-parking"></i> Available Slots
+        </button>
+        <button class="tab-button" onclick="openTab('parkingTicketTab')">
+            <i class="fas fa-ticket-alt"></i> Parking Ticket
         </button>
     </div>
 
@@ -89,11 +91,11 @@
     <div id="customerDetailsTab" class="content">
         <h3 class="section-title"><i class="fas fa-users"></i> Customer Details</h3>
 
-<!--        <div class="customer-tabs">-->
-<!--            <div class="customer-tab active" onclick="showCustomerTab('allCustomers')">All Customers</div>-->
-<!--            <div class="customer-tab" onclick="showCustomerTab('frequentCustomers')">Frequent Customers</div>-->
-<!--            <div class="customer-tab" onclick="showCustomerTab('searchCustomer')">Search Customer</div>-->
-<!--        </div>-->
+        <div class="customer-tabs">
+            <div class="customer-tab active" onclick="showCustomerTab('allCustomers')">All Customers</div>
+            <div class="customer-tab" onclick="showCustomerTab('frequentCustomers')">Frequent Customers</div>
+            <div class="customer-tab" onclick="showCustomerTab('searchCustomer')">Search Customer</div>
+        </div>
 
         <div id="allCustomers" class="customer-tab-content active">
             <div id="customerList" class="vehicle-list"></div>
@@ -140,5 +142,25 @@
 
         <div id="slotsList" class="slots-container"></div>
     </div>
+
+    <!-- Parking Ticket Tab -->
+    <div id="parkingTicketTab" class="content">
+        <h3 class="section-title"><i class="fas fa-ticket-alt"></i> Parking Ticket</h3>
+
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" id="ticketVehicleNumber" placeholder="Enter Vehicle Number">
+            </div>
+        </div>
+
+        <button onclick="generateTicket()">
+            <i class="fas fa-receipt"></i> Generate Ticket
+        </button>
+
+        <div id="ticketResult" style="margin-top: 20px;"></div>
+    </div>
 </div>
 
+<script src="script.js"></script>
+</body>
+</html>
