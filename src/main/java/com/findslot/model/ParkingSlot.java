@@ -1,7 +1,9 @@
 package com.findslot.model;
+
 import java.io.Serializable;
 
 public class ParkingSlot implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     private int id;
@@ -9,7 +11,6 @@ public class ParkingSlot implements Serializable {
     private boolean occupied;
 
     private String vehicleNumber;
-
 
     public ParkingSlot() {
     }
@@ -20,7 +21,6 @@ public class ParkingSlot implements Serializable {
         this.vehicleNumber = null;
     }
 
-    // Getters and setters
     public int getId() {
         return id;
     }
@@ -44,6 +44,4 @@ public class ParkingSlot implements Serializable {
     public void setVehicleNumber(String vehicleNumber) {
         this.vehicleNumber = vehicleNumber;
     }
-
-
 }
