@@ -1,64 +1,76 @@
 package com.findslot.model;
 
+import org.springframework.cglib.core.Local;
+
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class Vehicle {
-    private String number;
-    private String type;
-    private String owner;
-    private String phone;
-    private LocalDateTime entryTime;
+    private String vehicleNumber;
+    private String vehicleType;
+    private LocalTime entryTime;
+    private LocalTime exitTime;
+    private double fee;
+    private int slotNumber;
 
     public Vehicle() {
-        this.entryTime = LocalDateTime.now();
     }
 
-    public Vehicle(String number, String type, String owner, String phone) {
-        this.number = number;
-        this.type = type;
-        this.owner = owner;
-        this.phone = phone;
-        this.entryTime = LocalDateTime.now();
+    public Vehicle(String vehicleNumber, String vehicleType, LocalTime entryTime, LocalTime exitTime, double fee, int slotNumber) {
+        this.vehicleNumber = vehicleNumber;
+        this.vehicleType = vehicleType;
+        this.entryTime = entryTime;
+        this.exitTime = exitTime;
+        this.fee = fee;
+        this.slotNumber  = slotNumber;
     }
 
     // Getters and setters
-    public String getNumber() {
-        return number;
+    public String getVehicleNumber() {
+        return vehicleNumber;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setVehicleNumber(String vehicleNumber) {
+        this.vehicleNumber = vehicleNumber;
     }
 
-    public String getType() {
-        return type;
+    public String getVehicleType() {
+        return vehicleType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setVehicleType(String vehicleNumber) {
+        this.vehicleType = vehicleType;
     }
 
-    public String getOwner() {
-        return owner;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public LocalDateTime getEntryTime() {
+    public LocalTime getEntryTime () {
         return entryTime;
     }
 
-    public void setEntryTime(LocalDateTime entryTime) {
+    public void setEntryTime (LocalTime entryTime) {
         this.entryTime = entryTime;
+    }
+
+    public LocalTime getExitTime () {
+        return exitTime;
+    }
+
+    public void setExitTime (LocalTime exitTime) {
+        this.exitTime = exitTime;
+    }
+
+    public double getFee () {
+        return fee;
+    }
+
+    public void setFee (double fee) {
+        this.fee = fee;
+    }
+
+    public int getSlotNumber () {
+        return slotNumber;
+    }
+
+    public void setSlotNumber (int slotNumber) {
+        this.slotNumber = slotNumber;
     }
 }
