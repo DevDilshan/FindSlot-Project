@@ -1,6 +1,7 @@
 // File: src/main/java/com/parking/controller/CustomerController.java
 package com.findslot.controller;
 
+
 import com.findslot.model.Customer;
 import com.findslot.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-// REST API endpoints for customer management
 @RestController
 @RequestMapping("/api/customers")
 public class CustomerController {
