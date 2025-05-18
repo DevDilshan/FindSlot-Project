@@ -1,7 +1,8 @@
-package com.findslot.model;
-import com.findslot.model.ParkingSlot;
+package com.findslot.service;
+
 import com.findslot.util.FileStorageUtil;
-import Hansi.util.ParkingStack;
+
+import com.findslot.util.ParkingStack;
 import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PostConstruct;
@@ -10,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-
+com.findslot.util.ParkingStack
 @Service
 public class ParkingSlotService {
     private static final String SLOTS_FILE = "data/slots.txt";

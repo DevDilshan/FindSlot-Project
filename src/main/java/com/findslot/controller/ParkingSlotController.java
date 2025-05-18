@@ -1,5 +1,5 @@
-package com.findslot.model;
-import com.findslot.model.ParkingSlot;
+package com.findslot.controller;
+
 import com.findslot.service.ParkingSlotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequestMapping("/api/slots")
 public class ParkingSlotController {
+
     @Autowired
     private ParkingSlotService slotService;
 
@@ -33,5 +35,4 @@ public class ParkingSlotController {
         List<ParkingSlot> slots = slotService.getOccupiedSlots();
         return ResponseEntity.ok(slots);
     }
-
 }
