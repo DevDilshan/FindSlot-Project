@@ -1,24 +1,34 @@
 package com.findslot.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class ParkingTicket {
+public class ParkingTicket implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String ticketNumber;
+
     private String vehicleNumber;
+
     private String vehicleType;
+
     private String ownerName;
+
     private String ownerPhone;
+
     private Date entryTime;
+
     private Date issueTime;
+
     private int slotNumber;
 
-    // Default constructor
+
     public ParkingTicket() {
-        this.issueTime = new Date();
+        this.issueTime = new Date(); // Set current time as issue time
     }
 
-    // Constructor with parameters
+
     public ParkingTicket(String ticketNumber, String vehicleNumber, String vehicleType,
                          String ownerName, String ownerPhone, Date entryTime, int slotNumber) {
         this.ticketNumber = ticketNumber;
@@ -28,10 +38,9 @@ public class ParkingTicket {
         this.ownerPhone = ownerPhone;
         this.entryTime = entryTime;
         this.slotNumber = slotNumber;
-        this.issueTime = new Date();
+        this.issueTime = new Date(); // Set current time as issue time
     }
 
-    // Getters and setters
     public String getTicketNumber() {
         return ticketNumber;
     }
