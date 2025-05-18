@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package com.findslot.model;
 
 import java.io.Serializable;
@@ -13,6 +12,7 @@ public class ParkingSlot implements Serializable {
 
     private String vehicleNumber;
 
+
     public ParkingSlot() {
     }
 
@@ -22,6 +22,7 @@ public class ParkingSlot implements Serializable {
         this.vehicleNumber = null;
     }
 
+    // Getters and setters
     public int getId() {
         return id;
     }
@@ -46,5 +47,3 @@ public class ParkingSlot implements Serializable {
         this.vehicleNumber = vehicleNumber;
     }
 }
-=======
->>>>>>> de3475c888f4e5d79418697befc00c691289bac5
