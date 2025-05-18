@@ -1,5 +1,5 @@
-package com.findslot.model;
-import com.findslot.model.ParkingSlot;
+package com.findslot.controller;
+import com.findslot.controller.ParkingSlot;
 import com.findslot.service.ParkingSlotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

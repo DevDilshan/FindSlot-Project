@@ -1,7 +1,8 @@
-package com.findslot.model;
-import com.findslot.model.ParkingSlot;
+package com.findslot.service;
+
+import com.findslot.service.ParkingSlot;
 import com.findslot.util.FileStorageUtil;
-import Hansi.util.ParkingStack;
+
 import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PostConstruct;
