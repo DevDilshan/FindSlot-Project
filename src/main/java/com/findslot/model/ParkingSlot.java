@@ -12,6 +12,7 @@ public class ParkingSlot implements Serializable {
 
     private String vehicleNumber;
 
+
     public ParkingSlot() {
     }
 
@@ -21,6 +22,7 @@ public class ParkingSlot implements Serializable {
         this.vehicleNumber = null;
     }
 
+    // Getters and setters
     public int getId() {
         return id;
     }
