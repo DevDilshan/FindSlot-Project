@@ -66,7 +66,7 @@ public class CustomerService {
 
     public List<String> getFrequentCustomers() {
         return customers.entrySet().stream()
-                .filter(entry -> entry.getValue().getVisitCount() > 3)
+                .filter(entry -> entry.getValue().getVisitCount() > 1)
                 .map(Map.Entry::getKey)
                 .collect(Collectors.toList());
     }
