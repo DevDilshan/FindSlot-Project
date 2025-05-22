@@ -292,7 +292,7 @@ function removeVehicle(number) {
             return response.json();
         })
         .then(function(record) {
-            showSuccess(`Vehicle ${number} has been removed. Parking fee: $${record.fee.toFixed(2)}`);
+            showSuccess(`Vehicle ${number} has been removed. Parking fee: Rs${record.fee.toFixed(2)}`);
 
             // Refresh data
             fetchVehicles();
