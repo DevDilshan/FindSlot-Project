@@ -313,11 +313,12 @@ function showCustomerTab(tabId) {
     var customerTabs = document.querySelectorAll('.customer-tab');
     for (var i = 0; i < customerTabs.length; i++) {
         customerTabs[i].classList.remove('active');
-    }
 
-    // Show the selected customer tab
-    var selectedTab = document.querySelector('.customer-tab[onclick="showCustomerTab(\'' + tabId + '\')"]');
-    selectedTab.classList.add('active');
+        // Activate the tab that matches the tabId
+        if (customerTabs[i].getAttribute('data-tab') === tabId) {
+            customerTabs[i].classList.add('active');
+        }
+    }
 
     // Hide all customer tab content
     var customerTabContents = document.querySelectorAll('.customer-tab-content');
@@ -325,8 +326,15 @@ function showCustomerTab(tabId) {
         customerTabContents[i].classList.remove('active');
     }
 
+        // Show the selected customer tab
+        var selectedTab = document.querySelector('.customer-tab[onclick="showCustomerTab(\'' + tabId + '\')"]');
+        selectedTab.classList.add('active');
+
     // Show the selected customer tab content
-    document.getElementById(tabId).classList.add('active');
+    var contentEl = document.getElementById(tabId);
+    if (contentEl) {
+        contentEl.classList.add('active');
+    }
 
     // Load data based on tab
     if (tabId === 'allCustomers') {
@@ -400,6 +408,7 @@ function displayCustomers(customers) {
                     </div>
                 </div>`;
         }
+
     }
 }
 
@@ -782,6 +791,10 @@ function displayTicket(ticket) {
                 <div class="ticket-info">
                     <div class="ticket-label">Slot Number</div>
                     <div class="ticket-value">${ticket.slotNumber}</div>
+                </div>
+                <div class="ticket-info">
+                    <div class="ticket-label">Price</div>
+                    <div class="ticket-value">Rs${ticket.fee}</div>
                 </div>
             </div>
             <div class="ticket-footer">
