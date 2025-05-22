@@ -1,5 +1,7 @@
 package com.findslot.model;
 
+import com.findslot.util.FeeCalculator;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -22,6 +24,9 @@ public class ParkingTicket implements Serializable {
     private Date issueTime;
 
     private int slotNumber;
+    private FeeCalculator feeCalculator;
+    private double fee;
+    private Date exitTime;
 
 
     public ParkingTicket() {
@@ -30,15 +35,17 @@ public class ParkingTicket implements Serializable {
 
 
     public ParkingTicket(String ticketNumber, String vehicleNumber, String vehicleType,
-                         String ownerName, String ownerPhone, Date entryTime, int slotNumber) {
+                         String ownerName, String ownerPhone, Date entryTime, Date exitTime,int slotNumber, double fee) {
         this.ticketNumber = ticketNumber;
         this.vehicleNumber = vehicleNumber;
         this.vehicleType = vehicleType;
         this.ownerName = ownerName;
         this.ownerPhone = ownerPhone;
         this.entryTime = entryTime;
+        this.exitTime = exitTime;
         this.slotNumber = slotNumber;
         this.issueTime = new Date(); // Set current time as issue time
+        this.fee = fee;
     }
 
     public String getTicketNumber() {
@@ -103,5 +110,12 @@ public class ParkingTicket implements Serializable {
 
     public void setSlotNumber(int slotNumber) {
         this.slotNumber = slotNumber;
+    }
+
+    public double getFee() {
+        return fee;
+    }
+    public void setFee(double fee) {
+        this.fee = fee;
     }
 }
