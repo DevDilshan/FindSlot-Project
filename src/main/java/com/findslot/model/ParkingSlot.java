@@ -22,7 +22,6 @@ public class ParkingSlot implements Serializable {
         this.vehicleNumber = null;
     }
 
-    // Getters and setters
     public int getId() {
         return id;
     }
