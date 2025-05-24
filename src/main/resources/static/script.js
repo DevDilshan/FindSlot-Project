@@ -718,7 +718,7 @@ function displayParkingHistory(history) {
                         <span class="vehicle-time">Entry: ${entryTime} | Exit: ${exitTime}</span>
                     </div>
                     <div class="actions">
-                        <span style="font-weight: bold; color: var(--primary);">$${record.fee.toFixed(2)}</span>
+                        <span style="font-weight: bold; color: var(--primary);">Rs${record.fee.toFixed(2)}</span>
                     </div>
                 </div>`;
         }
